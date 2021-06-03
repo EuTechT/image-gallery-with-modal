@@ -102,13 +102,45 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+}
 
+.icon-btn {
     font-size: 3rem;
     color: #fff;
     cursor: pointer;
     user-select: none;
 }
 
-#btn-close:hover {
+.icon-btn:hover {
     text-shadow: 0px 0px 5px #fff;
+}
+
+#btn-previous {
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+#btn-next {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+@media(max-width: 920px) {
+    #btn-previous {
+        top: unset;
+        bottom: -75px;
+        left: 35%;
+        transform: translate(0);
+    }
+    
+    #btn-next {
+        top: unset;
+        right: 32%;
+        bottom: -75px;
+        transform: translate(0);
+    }
 }
