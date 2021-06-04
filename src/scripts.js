@@ -25,7 +25,7 @@ btnClose.addEventListener('click', () => {
     modal.classList.remove('modal--active');
 });
 
-function closeModal(event) {
+function pressKey(event) {
     //console.log(event);
     if(event.key == "Escape") {
         modal.classList.remove('modal--active');
@@ -38,11 +38,9 @@ function closeModal(event) {
     }
 }
 
-window.onkeydown = closeModal;
+window.onkeydown = pressKey;
 
-btnNext.addEventListener('click', () => {
-    nextImg();
-});
+btnNext.addEventListener('click', nextImg);
 
 function nextImg() {
     let imgModalCurrent = imgModal.src;
@@ -61,10 +59,7 @@ function nextImg() {
     }
 }
 
-btnPrevious.addEventListener('click', () => {
-    previousImg();
-});
-
+btnPrevious.addEventListener('click', previousImg);
 
 function previousImg() {
     let imgModalCurrent = imgModal.src;
