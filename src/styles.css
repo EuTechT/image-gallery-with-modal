@@ -27,9 +27,8 @@ body {
     width: 400px;
     height: 200px;
     overflow: hidden;
-
-    margin-top: 20px;
     user-select: none;
+    margin: 20px 0;
 }
 
 .small-img {
@@ -93,6 +92,7 @@ body {
 
 .number-image {
     padding: 0.2rem;
+    user-select: none;
 }
 
 .bar {
