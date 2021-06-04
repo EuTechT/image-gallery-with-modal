@@ -91,6 +91,22 @@ body {
     }
 }
 
+.number-image {
+    padding: 0.2rem;
+}
+
+.bar {
+    display: inline-block;
+    height: 10px;
+    width: 1px;
+    background-color: #fff;
+}
+
+.current-image, .total-images {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
 #img-modal {
     width: 100%;
     border: 3px solid rgba(255, 255, 255, 0.8);

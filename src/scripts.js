@@ -4,6 +4,10 @@ let imgModal = window.document.querySelector('#img-modal');
 let btnClose = window.document.querySelector('#btn-close');
 let btnPrevious = window.document.querySelector('#btn-previous');
 let btnNext = window.document.querySelector('#btn-next');
+let currentImage = window.document.querySelector('.current-image');
+let totalImages = window.document.querySelector('.total-images');
+
+totalImages.innerHTML = images.length;
 
 images.forEach(
     (image, i, a) => {
@@ -12,6 +16,8 @@ images.forEach(
             changeImage(image.getAttribute('src'), image.getAttribute('alt'));
             btnPrevious.style.display = 'inline';
             btnNext.style.display = 'inline';
+
+            currentImage.innerHTML = i + 1;
         });
     }
 );
@@ -47,12 +53,14 @@ function nextImg() {
     btnPrevious.style.display = 'inline';
 
     for(let i = 0; i < images.length; i++){
+
         if(imgModalCurrent == images[i].src){
             let pos = i + 1;
 
             if(pos == images.length) {
                 btnNext.style.display = 'none';
             } else {
+                currentImage.innerHTML = pos + 1;
                 changeImage(images[pos].getAttribute('src'), images[pos].getAttribute('alt'));
             }
         }
@@ -72,6 +80,7 @@ function previousImg() {
             if(pos < 0) {
                 btnPrevious.style.display = 'none';
             } else {
+                currentImage.innerHTML = (pos + 2) - 1;
                 changeImage(images[pos].getAttribute('src'), images[pos].getAttribute('alt'));
             }
         }
